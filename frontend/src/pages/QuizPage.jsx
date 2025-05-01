@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import API from "../utils/api";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function HomePage() {
   const [quizzes, setQuizzes] = useState([]);
@@ -167,6 +168,9 @@ function HomePage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black text-white px-4">
+      <Helmet>
+        <title> Quiz | QuizMaster </title>
+      </Helmet>
       <div className="w-full max-w-2xl bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
         <div className="flex justify-between items-center">
           <h2 className="text-xl font-bold mb-6 text-center">

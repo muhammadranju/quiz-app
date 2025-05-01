@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Users } from "lucide-react";
 import API from "../utils/api";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 function ManageUsers() {
   const [users, setUsers] = useState([]);
@@ -55,6 +56,9 @@ function ManageUsers() {
 
   return (
     <div className="mx-auto  text-white px-4 mt-52">
+      <Helmet>
+        <title> Manage Users | QuizMaster </title>
+      </Helmet>
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-3xl font-bold flex items-center gap-2">

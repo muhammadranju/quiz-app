@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import API from "../utils/api";
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -47,6 +48,9 @@ function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black text-white">
+      <Helmet>
+        <title> Login | QuizMaster </title>
+      </Helmet>
       <form
         onSubmit={handleLogin}
         className="bg-gray-800 p-8 rounded-xl shadow-2xl w-full max-w-sm border border-gray-700"

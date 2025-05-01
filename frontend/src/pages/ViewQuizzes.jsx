@@ -4,6 +4,7 @@ import API from "../utils/api";
 import QuizCard from "../components/QuizCard";
 import QuizForm from "../components/QuizForm"; // Reuse existing form
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 function ViewQuizzes() {
   const [quizzes, setQuizzes] = useState([]);
@@ -69,6 +70,9 @@ function ViewQuizzes() {
 
   return (
     <div className="w-full relative text-white mt-24 max-w-6xl mx-auto">
+      <Helmet>
+        <title> View Quizzes | QuizMaster </title>
+      </Helmet>
       <div className="mx-auto p-6 w-auto">
         <h2 className="text-3xl font-semibold mb-4">
           All Quizzes ({quizzes?.length || 0})

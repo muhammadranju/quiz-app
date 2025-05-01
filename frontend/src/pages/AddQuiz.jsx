@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import API from "../utils/api";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 function AddQuiz() {
   const [question, setQuestion] = useState("");
@@ -57,6 +58,9 @@ function AddQuiz() {
 
   return (
     <div className="min-h-screen mx-auto  text-white flex items-center justify-center px-4">
+      <Helmet>
+        <title> Add Quiz | QuizMaster </title>
+      </Helmet>
       <div className="w-full max-w-6xl shadow-md rounded-lg bg-gray-900 border border-gray-700 p-6">
         <h2 className="text-2xl font-semibold mb-6">Add New Quiz</h2>
         <form onSubmit={handleSubmit}>

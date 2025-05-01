@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import API from "../utils/api";
 import { FaUserPlus } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 function Nonfiction() {
   const [users, setUsers] = useState([]);
@@ -31,6 +32,9 @@ function Nonfiction() {
 
   return (
     <div className="p-6 w-full max-w-5xl mx-auto mt-44 text-white">
+      <Helmet>
+        <title> Notifications | QuizMaster </title>
+      </Helmet>
       <h1 className="text-3xl font-bold mb-4"> Notifications</h1>
       <hr className="mb-6 border-gray-700" />
       <div className="space-y-4">

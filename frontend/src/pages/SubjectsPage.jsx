@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import API from "../utils/api";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 function SubjectPage() {
   const [categories, setCategories] = useState([]);
@@ -49,6 +50,9 @@ function SubjectPage() {
 
   return (
     <div className=" mx-auto text-white  px-4 mt-52">
+      <Helmet>
+        <title> Subjects | QuizMaster </title>
+      </Helmet>
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-semibold text-white mb-4">
           Quiz Categories

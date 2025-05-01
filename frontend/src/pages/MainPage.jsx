@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const features = [
@@ -25,6 +26,9 @@ const features = [
 const MainPage = () => {
   return (
     <div className="bg-gray-950 text-white min-h-screen">
+      <Helmet>
+        <title> Home | QuizMaster </title>
+      </Helmet>
       {/* Header */}
       <header className="flex flex-wrap items-center justify-between px-6 md:px-12 lg:px-32 xl:px-64 py-4 bg-gray-900 shadow border-b border-gray-800">
         <h1 className="text-xl font-bold text-white">QuizMaster</h1>

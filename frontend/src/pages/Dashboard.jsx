@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import API from "../utils/api";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 function Dashboard() {
   const [quizzes, setQuizzes] = useState([]);
@@ -31,6 +32,9 @@ function Dashboard() {
 
   return (
     <div className=" w-full  text-white flex flex-col items-center justify-start mt-36">
+      <Helmet>
+        <title> Dashboard | QuizMaster </title>
+      </Helmet>
       <div className="w-full max-w-5xl px-6 py-20">
         <h1 className="text-3xl font-bold mb-4">Dashboard</h1>
         <hr className="mb-6 border-gray-700" />
